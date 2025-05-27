@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {IonContent,IonInput,IonButton,IonCard,IonCardHeader,IonCardTitle,IonItem, IonLabel,IonCardContent} from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  imports: [CommonModule,IonContent,IonInput,IonLabel,IonItem,IonButton,IonCard,IonCardHeader,IonCardTitle,IonCardContent
-  ]
+  imports:[CommonModule,ReactiveFormsModule,IonButton,IonInput,IonItem,IonLabel,IonContent]
 })
 export class LoginComponent  implements OnInit {
   registerForm: FormGroup;
